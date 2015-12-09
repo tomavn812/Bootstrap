@@ -1,0 +1,441 @@
+﻿    @{
+        ViewBag.Title = "Home Page";
+    }
+<script type="text/javascript">
+
+
+
+    $(document).ready(function () {
+
+        $('#btnCancel').bind('click', function () {
+            if (true) {
+                BootstrapDialog.show({
+                    title: 'Cancel Confirm Dialog',
+                    message: 'Are you sure?',
+
+                    buttons: [{
+                        label: 'Yes',
+                        cssClass: 'btn-success',
+                        action: function (dialog) {
+                            dialog.close();
+                        }
+                    }, {
+                        label: 'No',
+                        cssClass: 'btn-danger',
+                        action: function (dialog) {
+                            dialog.close();
+                        }
+                    }]
+                }).open();
+            } else {
+                BootstrapDialog.show({
+                    title: 'Cancel Confirm Dialog',
+                    message: 'Unsaved changes on this tab will be lost. Are you sure?',
+
+                    buttons: [{
+                        label: 'Yes',
+                        cssClass: 'btn-success',
+                        action: function (dialog) {
+                            dialog.close();
+                        }
+                    }, {
+                        label: 'No',
+                        cssClass: 'btn-danger',
+                        action: function (dialog) {
+                            dialog.close();
+                        }
+                    }]
+                }).open();
+            }
+        });
+        $('#btnSaveClose, #btnSavePrint').bind('click', function () {
+
+            triggerSave(data_id);
+        });
+    });
+
+    function triggerTransferSave(isSaved) {
+        if ('@Session["viewID"]' == "2") { }
+    }
+
+
+</script>
+<div class="jumbotron">
+    <h1>ASP.NET</h1>
+    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
+    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-12 top-2">
+
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs">
+            @*
+            <li>@Html.ActionLink("Home", "Index", "Home", new { id = @Model.ID, viewID = Session["viewID"] }, new { onclick = "triggerSave();" })</li>
+            <li>@Html.ActionLink("Home1", "Index", "Home", new { id = @Model.ID, viewID = Session["viewID"] }, new { onclick = "triggerSave();" })</li>
+            <li>@Html.ActionLink("Home2", "Index", "Home", new { id = @Model.ID, viewID = Session["viewID"] }, new { onclick = "triggerSave();" })</li>*@
+
+        </ul>
+
+
+        <div class="tab-content">
+            <div class="tab-pane active">
+
+                <div class="row">
+                    <div id="error-container" class="col-md-offset-9">
+                    </div>
+                </div>
+                <div class="row">
+                    <h3 class="heading">Index</h3>
+                    <table class="table table-responsive table-FixedSize">
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>
+                                    <h4 class="heading">Index</h4>
+                                </td>
+                                <td>
+                                    <h4 class="heading">Index</h4>
+                                </td>
+                                <td>
+                                    <h4 class="heading">Index</h4>
+                                </td>
+                                <td>
+                                    <h4 class="heading">Index</h4>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="Index" class="col-md-3 h5">Index</label>
+
+                                </td>
+                                <td>
+                                    <label for="Index" class="col-md-9 zoneout ">Index</label>
+
+                                </td>
+                                <td>
+                                    <input type="text" name="Index" class="input-sm " maxlength="6" value="">
+
+                                </td>
+                                <td>
+                                    <input type="text" name="Index" class="input-sm " maxlength="6" value="">
+
+                                </td>
+                                <td>
+                                    <input type="text" name="Index" class="input-sm " maxlength="6" value="">
+                                    <label for="Index" class="inline"></label>
+
+                                </td>
+                                <td>
+                                    <input type="text" name="Index" class="input-sm " maxlength="6" value="">
+                                    <label for="Index" class="inline"></label>
+
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <label for="Index" class="col-md-3 h5">Index</label>
+
+                                </td>
+                                <td>
+                                    <input type="text" name="Index" class="input-sm " maxlength="6" value="">
+                                </td>
+                                <td>
+                                    <input type="text" name="Index" class="input-sm " maxlength="6" value="">
+                                </td>
+                                <td>
+                                    <input type="text" name="Index" class="input-sm " maxlength="6" value="">
+                                    <label for="Index" class="inline"></label>
+
+                                </td>
+                                <td>
+                                    <input type="text" name="Index" class="input-sm " maxlength="6" value="">
+                                    <label for="Index" class="inline"></label>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <label for="Index" class="col-md-3 h5">Index</label>
+
+                                </td>
+                                <td>
+                                    <input type="text" name="Index" class="input-sm " maxlength="6" value="">
+                                </td>
+                                <td>
+                                    <input type="text" name="Index" class="input-sm " maxlength="6" value="">
+                                </td>
+                                <td>
+                                    <input type="text" name="Index" class="input-sm " maxlength="6" value="">
+                                    <label for="Index" class="inline"></label>
+
+                                </td>
+                                <td>
+                                    <input type="text" name="Index" class="input-sm " maxlength="6" value="">
+                                    <label for="Index" class="inline"></label>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <label for="Index" class="col-md-3 h5">Index</label>
+
+                                </td>
+                                <td>
+                                    <input type="text" name="Index" class="input-sm " maxlength="6" value="">
+                                </td>
+                                <td>
+                                    <input type="text" name="Index" class="input-sm " maxlength="6" value="">
+                                </td>
+                                <td>
+                                    <input type="text" name="Index" class="input-sm " maxlength="6" value="">
+                                    <label for="Index" class="inline"></label>
+
+                                </td>
+                                <td>
+                                    <input type="text" name="Index" class="input-sm " maxlength="6" value="">
+                                    <label for="Index" class="inline"></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <label for="Index" class="col-md-3 h5">Index</label>
+
+                                </td>
+                                <td>
+                                    <input type="text" name="Index" class="input-sm " maxlength="6" value="">
+                                </td>
+                                <td>
+                                    <input type="text" name="Index" class="input-sm " maxlength="6" value="">
+                                </td>
+                                <td>
+                                    <input type="text" name="Index" class="input-sm " maxlength="6" value="">
+                                    <label for="Index" class="inline"></label>
+
+                                </td>
+                                <td>
+                                    <input type="text" name="Index" class="input-sm " maxlength="6" value="">
+                                    <label for="Index" class="inline"></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <label for="Index" class="col-md-3 h5">Index</label>
+
+                                </td>
+                                <td>
+                                    <input type="text" name="Index" class="input-sm " maxlength="6" value="">
+                                </td>
+                                <td>
+                                    <input type="text" name="Index" class="input-sm " maxlength="6" value="">
+                                </td>
+                                <td>
+                                    <input type="text" name="Index" class="input-sm " maxlength="6" value="">
+                                    <label for="Index" class="inline"></label>
+
+                                </td>
+                                <td>
+                                    <input type="text" name="Index" class="input-sm " maxlength="6" value="">
+                                    <label for="Index" class="inline"></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <label for="Index" class="col-md-3 h5">Index</label>
+
+                                </td>
+                                <td>
+                                    <input type="text" name="Index" class="input-sm " maxlength="6" value="">
+                                </td>
+                                <td>
+                                    <input type="text" name="Index" class="input-sm " maxlength="6" value="">
+                                </td>
+                                <td>
+                                    <input type="text" name="Index" class="input-sm " maxlength="6" value="">
+                                    <label for="Index" class="inline"></label>
+
+                                </td>
+                                <td>
+                                    <input type="text" name="Index" class="input-sm " maxlength="6" value="">
+                                    <label for="Index" class="inline"></label>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <label for="Index" class="col-md-3 h5">Index</label>
+
+                                </td>
+                                <td>
+                                    <input type="text" name="Index" class="input-sm " maxlength="6" value="">
+                                </td>
+                                <td>
+                                    <input type="text" name="Index" class="input-sm " maxlength="6" value="">
+                                </td>
+                                <td>
+                                    <input type="text" name="Index" class="input-sm " maxlength="6" value="">
+                                    <label for="Index" class="inline"></label>
+
+                                </td>
+                                <td>
+                                    <input type="text" name="Index" class="input-sm " maxlength="6" value="">
+                                    <label for="Index" class="inline"></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <label for="Index" class="col-md-3 h5">Index</label>
+
+                                </td>
+                                <td>
+                                    <input type="text" name="Index" class="input-sm " maxlength="6" value="">
+                                </td>
+                                <td>
+                                    <input type="text" name="Index" class="input-sm " maxlength="6" value="">
+                                </td>
+                                <td>
+                                    <input type="text" name="Index" class="input-sm " maxlength="6" value="">
+                                    <label for="Index" class="inline"></label>
+
+                                </td>
+                                <td>
+                                    <input type="text" name="Index" class="input-sm " maxlength="6" value="">
+                                    <label for="Index" class="inline"></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <label for="Index" class="col-md-3 h5">Index</label>
+
+                                </td>
+                                <td>
+                                    <input type="text" name="Index" class="input-sm " maxlength="6" value="">
+                                </td>
+                                <td>
+                                    <input type="text" name="Index" class="input-sm " maxlength="6" value="">
+                                </td>
+                                <td>
+                                    <input type="text" name="Index" class="input-sm " maxlength="6" value="">
+                                    <label for="Index" class="inline"></label>
+
+                                </td>
+                                <td>
+                                    <input type="text" name="Index" class="input-sm " maxlength="6" value="">
+                                    <label for="Index" class="inline"></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <label for="Index" class="col-md-3 h5">Index</label>
+
+                                </td>
+                                <td>
+                                    <input type="text" name="Index" class="input-sm " maxlength="6" value="">
+                                </td>
+                                <td>
+                                    <input type="text" name="Index" class="input-sm " maxlength="6" value="">
+                                </td>
+                                <td>
+                                    <input type="text" name="Index" class="input-sm " maxlength="6" value="">
+                                    <label for="Index" class="inline"></label>
+
+                                </td>
+                                <td>
+                                    <input type="text" name="Index" class="input-sm " maxlength="6" value="">
+                                    <label for="Index" class="inline"></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <label for="Index" class="col-md-3 h5">Index</label>
+
+                                </td>
+                                <td>
+                                    <input type="text" name="Index" class="input-sm " maxlength="6" value="">
+                                </td>
+                                <td>
+                                    <input type="text" name="Index" class="input-sm " maxlength="6" value="">
+                                </td>
+                                <td>
+                                    <input type="text" name="Index" class="input-sm " maxlength="6" value="">
+                                    <label for="Index" class="inline"></label>
+
+                                </td>
+                                <td>
+                                    <input type="text" name="Index" class="input-sm " maxlength="6" value="">
+                                    <label for="Index" class="inline"></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <label for="Index" class="col-md-3 h5">Index</label>
+
+                                </td>
+                                <td>
+                                    <input type="text" name="Index" class="input-sm " maxlength="6" value="">
+                                </td>
+                                <td>
+                                    <input type="text" name="Index" class="input-sm " maxlength="6" value="">
+                                </td>
+                                <td>
+                                    <input type="text" name="Index" class="input-sm " maxlength="6" value="">
+                                    <label for="Index" class="inline"></label>
+
+                                </td>
+                                <td>
+                                    <input type="text" name="Index" class="input-sm " maxlength="6" value="">
+                                    <label for="Index" class="inline"></label>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <label for="Index" class="col-md-3 h5">Index</label>
+
+                                </td>
+                                <td>
+                                    <input type="text" name="Index" class="input-sm " maxlength="6" value="">
+                                </td>
+                                <td>
+                                    <input type="text" name="Index" class="input-sm " maxlength="6" value="">
+                                </td>
+                                <td>
+                                    <input type="text" name="Index" class="input-sm " maxlength="6" value="">
+                                    <label for="Index" class="inline"></label>
+
+                                </td>
+                                <td>
+                                    <input type="text" name="Index" class="input-sm " maxlength="6" value="">
+                                    <label for="Index" class="inline"></label>
+                                </td>
+                            </tr>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <hr />
+                <div class="pull-right">
+                    <button type="submit" class="btn btn-primary" id="btnSavePrint" name="btnSave" data-id="1">Save</button>
+                    <button type="submit" class="btn btn-primary" id="btnSaveClose" name="btnSaveClose" data-id="2">Save & Close</button>
+                    <button type="reset" class="button clear btn btn-danger" id="btnCancel">Cancel</button>
+                </div>
+
+            </div>
+        </div>

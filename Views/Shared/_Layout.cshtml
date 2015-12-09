@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+    <link rel="stylesheet" type="text/css" media="print" href="~/Content/print.css" />
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var $window = $(window);
+            if ($window.width() < 1025) {
+                $('#sidebar').addClass('menu-min');
+            }
+            else {
+                $('#sidebar').removeClass('menu-min');
+            }
+            $(window).on('resize', function () {
+                if ($window.width() < 1025) {
+                    $('#sidebar').addClass('menu-min');
+                }
+                else {
+                    $('#sidebar').removeClass('menu-min');
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="row top-bar">
+            <div class="col-md-6 col-xs-6">
+                <a href="@Url.Action(" Index", "Home" , new { Page })">
+                </a>
+            </div>
+            <div class="col-md-6 col-xs-6">
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+
+        <!-- Start a Main Container  -->
+        <div class="main-container row" id="main-container">
+            <div class="col-md-12">
+                <!-- Container for Left Sidebar  -->
+                <div class="main-container-inner row">
+
+                    @*<!-- Left Sidebar  -->
+                    <div class="sidebar col-md-2 no-padding" id="sidebar">
+
+                        <ul class="nav nav-list fa-ul">
+                            <li>
+                                <a href="@Url.Action(" Index", "Home" , routeValues null)">
+                                      <a href="">
+                                          <i class="fa fa-tachometer fa-lg fa-fw"></i>
+                                          <span class="menu-text">Dashboard</span>
+                                      </a>
+                            </li>
+
+
+                            <li>
+                                <a href="#" class="dropdown-toggle">
+                                    <i class="fa fa-pencil-square-o fa-lg fa-fw"></i>
+                                    <span class="menu-text"> Assessments </span>
+                                    <b class="arrow fa fa-angle-down"></b>
+                                </a>
+                                <ul class="submenu">
+                                    <li><a href=""></i> Home</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" class="dropdown-toggle">
+                                    <i class="fa fa-pencil-square-o fa-lg fa-fw"></i>
+                                    <span class="menu-text"> Text </span>
+                                    <b class="arrow fa fa-angle-down"></b>
+                                </a>
+                                <ul class="submenu">
+                                    <li><i class="fa fa-angle-double-right"></i> Submenu</li>
+                                </ul>
+                            </li>
+                            
+                            <li>
+                                <a href="">
+                                    <i class="fa fa-stethoscope fa-lg fa-fw"></i>
+                                    <span class="menu-text"> Vitals </span>
+                                </a>
+                            </li>
+
+
+                            <li>
+                                <a href="#" class="dropdown-toggle">
+                                    <i class="fa fa-calendar fa-lg fa-fw"></i>
+                                    <span class="menu-text"> Scheduling </span>
+                                    <b class="arrow fa fa-angle-down"></b>
+                                </a>
+                                <ul class="submenu">
+                                    <li><a href=""><i class="fa fa-angle-double-right"></i> Index </a></li>
+                                    <li><a href=""><i class="fa fa-angle-double-right"></i> Index2 </a></li>
+                                </ul>
+                            </li>
+                           
+                        </ul>
+
+                    </div>
+                    <!-- End Left Sidebar -->*@
+
+                    <!-- RenderBody  -->
+                    <div class="main-content col-md-10">
+
+                        <div class="page-content">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    @RenderBody()
+                                </div><!-- /.col -->
+                            </div><!-- /.row -->
+                        </div><!-- /.page-content -->
+                    </div><!-- End RenderBody -->
+                </div> <!-- End Inner Main Container row-->
+            </div>  <!-- col-md-12 -->
+        </div><!-- End Outer Main Container row  -->
+
+        <div class="row">
+            <footer class="col-md-12">
+                <p>Copyright</p>
+            </footer>
+        </div>
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
+    </div>
+</body>
+</html>
+
+
+
+
+
+       
